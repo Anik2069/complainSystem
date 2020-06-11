@@ -231,11 +231,12 @@
                                     <div class="col-md-10">
                                         <select class="form-control">
                                             <option>-- Select --</option>
-                                            <option>Option 1</option>
-                                            <option>Option 2</option>
-                                            <option>Option 3</option>
-                                            <option>Option 4</option>
-                                            <option>Option 5</option>
+                                            <option value="summer_2020">Summer 2020</option>
+                                            <option value="sprint_2020">Spring 2020</option>
+                                            <option value="fall_2019">Fall 2019</option>
+                                            <option value="summer_2019">Summer 2019</option>
+                                            <option value="sprint_2019">Spring 2019</option>
+                                            <option value="fall_2018">Fall 2018</option>
                                         </select>
                                     </div>
                                 </div>
