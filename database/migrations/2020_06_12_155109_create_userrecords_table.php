@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComplainsTable extends Migration
+class CreateUserrecordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateComplainsTable extends Migration
      */
     public function up()
     {
-        Schema::create('complains', function (Blueprint $table) {
+        Schema::create('userrecords', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("date");
-            $table->string("cate");
-            $table->string("semester");
-            $table->string("title");
-            $table->string("description");
-            $table->string("user");
-            $table->string("status")->nullable();
+            $table->string("email");
+            $table->string("password");
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ class CreateComplainsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('complains');
+        Schema::dropIfExists('userrecords');
     }
 }

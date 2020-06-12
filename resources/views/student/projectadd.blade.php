@@ -208,17 +208,23 @@
 
                         </div>
                         <div class="card-body">
-                            <form action="#">
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>{{ $message }}</strong>
+                                </div>
+                            @endif
+                            <form action="/submit_complain" method="post">@csrf
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Listed Date</label>
                                     <div class="col-md-10">
-                                        <input type="date" class="form-control">
+                                        <input type="date" class="form-control" name="date">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Type of Complain</label>
                                     <div class="col-md-10">
-                                        <select class="form-control">
+                                        <select class="form-control" name="type">
                                             <option>-- Select --</option>
                                             @foreach($value as $val)
                                             <option value="{{$val["name"]}}">{{$val["name"]}}</option>
@@ -229,7 +235,7 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Semester</label>
                                     <div class="col-md-10">
-                                        <select class="form-control">
+                                        <select class="form-control" name="sname">
                                             <option>-- Select --</option>
                                             <option value="summer_2020">Summer 2020</option>
                                             <option value="sprint_2020">Spring 2020</option>
@@ -243,7 +249,7 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Complain Title</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" name="title" class="form-control">
                                     </div>
                                 </div>
 
@@ -252,7 +258,7 @@
                                     <label class="col-form-label col-md-2">Description</label>
                                     <div class="col-md-10">
                                         <textarea rows="5" cols="5" class="form-control"
-                                                  placeholder="Enter text here"></textarea>
+                                               name="des"  placeholder="Enter text here"></textarea>
                                     </div>
                                 </div>
 

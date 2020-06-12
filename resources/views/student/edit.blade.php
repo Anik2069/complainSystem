@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/specialities.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:49 GMT -->
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/form-basic-inputs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:54 GMT -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>DIU Complain System- Category </title>
+    <title>DIU Complain System - Complains </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/assets/img/favicon.png">
 
-    <!-- Favicon -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/assets/css/bootstrap.min.css">
 
-@include("student.csslink")
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="../assets/assets/css/font-awesome.min.css">
+
+    <!-- Feathericon CSS -->
+    <link rel="stylesheet" href="../assets/assets/css/feathericon.min.css">
+
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href="../assets/assets/plugins/datatables/datatables.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/assets/css/style.css">
+
+
+    <script src="../assets/assets/js/html5shiv.min.js"></script>
+    <script src="../assets/assets/js/respond.min.js"></script>
 </head>
 <body>
 
@@ -82,7 +98,7 @@
                                     <div class="media">
 												<span class="avatar avatar-sm">
 													<img class="avatar-img rounded-circle" alt="User Image"
-                                                         src="assets/assets//img/patients/patient1.jpg">
+                                                         src="assets/assets/img/patients/patient1.jpg">
 												</span>
                                         <div class="media-body">
                                             <p class="noti-details"><span class="noti-title">Charlene Reed</span> has
@@ -98,7 +114,7 @@
                                     <div class="media">
 												<span class="avatar avatar-sm">
 													<img class="avatar-img rounded-circle" alt="User Image"
-                                                         src="assets/img/patients/patient2.jpg">
+                                                         src="assets/assets/img/patients/patient2.jpg">
 												</span>
                                         <div class="media-body">
                                             <p class="noti-details"><span class="noti-title">Travis Trimble</span> sent
@@ -113,7 +129,7 @@
                                     <div class="media">
 												<span class="avatar avatar-sm">
 													<img class="avatar-img rounded-circle" alt="User Image"
-                                                         src="assets/img/patients/patient3.jpg">
+                                                         src="assets/assets/img/patients/patient3.jpg">
 												</span>
                                         <div class="media-body">
                                             <p class="noti-details"><span class="noti-title">Carl Kelly</span> send a
@@ -163,8 +179,9 @@
     <!-- /Header -->
 
     <!-- Sidebar -->
-@include("admin.nav")
+@include("student.nav")
 <!-- /Sidebar -->
+
 
     <!-- Page Wrapper -->
     <div class="page-wrapper">
@@ -173,168 +190,85 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="row">
-                    <div class="col-sm-7 col-auto">
-                        <h3 class="page-title">Category</h3>
+                    <div class="col">
+                        <h3 class="page-title">Write Your Complain</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Category</li>
+                            <li class="breadcrumb-item active">Write Your Complain</li>
                         </ul>
-                    </div>
-                    <div class="col-sm-5 col">
-                        <a href="#Add_Specialities_details" data-toggle="modal"
-                           class="btn btn-primary float-right mt-2">Add Category</a>
                     </div>
                 </div>
             </div>
             <!-- /Page Header -->
+
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-lg-12">
                     <div class="card">
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success alert-block">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>{{ $message }}</strong>
-                            </div>
-                        @endif
+                        <div class="card-header">
+
+                        </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="datatable table table-hover table-center mb-0">
-                                    <thead>
-                                    <tr>
-                                        <th>Serial</th>
-                                        <th>ID</th>
-                                        <th>Category</th>
-                                        <th>Total Complain</th>
-                                        <th class="text-right">Actions</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach($value as $val)
-                                    <tr>
-                                        <td>{{$c=$c+1}}</td>
-                                        <td>#DIU_COM_{{$val['id']}}</td>
-
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2">
-
-                                                </a>
-                                                <a href="profile.html">{{$val['name']}}</a>
-                                            </h2>
-                                        </td>
-                                        <td>{{$val['count']}}</td>
-                                        <td class="text-right">
-                                            <div class="actions">
-                                                <a class="btn btn-sm bg-success-light" data-toggle="modal"
-                                                   href="#edit_specialities_details{{$val['id']}}">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a data-toggle="modal" href="#delete_modal{{$val['id']}}"
-                                                   class="btn btn-sm bg-danger-light">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-@endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Page Wrapper -->
-
-
-    <!-- Add Modal -->
-    <div class="modal fade" id="Add_Specialities_details" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add Category</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="/submitcate" method="post">@csrf
-
-                        <div class="col-12 col-sm-12">
-                            <div class="form-group">
-                                <label>Category Name</label>
-                                <input type="text" class="form-control" name="category" placeholder="Category">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /ADD Modal -->
-
-    <!-- Edit Details Modal -->
-    @foreach($value as $val)
-    <div class="modal fade" id="edit_specialities_details{{$val['id']}}" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add Category</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="/change" method="post">
-                        @csrf
-                        <div class="row form-row">
-                            <div class="col-12 col-sm-12">
-                                <div class="form-group">
-                                    <label>Category</label>
-                                    <input type="hidden" class="form-control" name="id" value="{{$val['id']}}">
-                                    <input type="text" class="form-control" name="category" value="{{$val['name']}}">
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>{{ $message }}</strong>
                                 </div>
-                            </div>
+                            @endif
+                            <form action="/submit_complain1" method="post">@csrf
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Listed Date</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" value="{{$value['date']}}" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Type of Complain</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" value="{{$value['cate']}}" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Semester</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" value="{{$value['semester']}}" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Complain Title</label>
+                                    <div class="col-md-10">
+                                        <input type="text" name="title" class="form-control" value="{{$value['title']}}">
+                                        <input type="hidden" name="id" class="form-control" value="{{$value['id']}}">
+                                    </div>
+                                </div>
 
 
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Description</label>
+                                    <div class="col-md-10">
+                                        <textarea rows="5" cols="5" class="form-control"
+                                               name="des"  placeholder="Enter text here"> {{$value['description']}}</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2"> </label>
+                                    <div class="col-md-10">
+                                        <input class="form-control btn btn-primary" type="submit">
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>@endforeach
-    <!-- /Edit Details Modal -->
-
-    <!-- Delete Modal -->
-    @foreach($value as $val)
-    <div class="modal fade" id="delete_modal{{$val['id']}}" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <!--	<div class="modal-header">
-                        <h5 class="modal-title">Delete</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>-->
-                <div class="modal-body">
-                    <div class="form-content p-2">
-                        <h4 class="modal-title">Delete</h4>
-                        <p class="mb-4">Are you sure want to delete?</p>
-                        <a href="/delete_category/{{$val['id']}}">
-                        <button type="button" class="btn btn-primary">Save</button></a>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
-    <!-- /Delete Modal -->
-</div>@endforeach
+    <!-- /Main Wrapper -->
+
+</div>
 <!-- /Main Wrapper -->
 
 <!-- jQuery -->
@@ -347,14 +281,10 @@
 <!-- Slimscroll JS -->
 <script src="assets/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-<!-- Datatables JS -->
-<script src="assets/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="assets/assets/plugins/datatables/datatables.min.js"></script>
-
 <!-- Custom JS -->
 <script src="assets/assets/js/script.js"></script>
 
 </body>
 
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/specialities.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:51 GMT -->
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/form-basic-inputs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:54 GMT -->
 </html>

@@ -5,18 +5,20 @@
                 <li class="menu-title">
                     <span>Main</span>
                 </li>
-                <li class="active">
-                    <a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                <li class="">
+                    <a href="/index"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                 </li>
 
                 <li>
-                    <a href="projectadd.html"><i class="fe fe-users"></i> <span>Write a Complain</span></a>
+                    <a href="/complain_make"><i class="fe fe-users"></i> <span>Write a Complain</span></a>
                 </li>
                 <li>
-                    <a href="preview.html"><i class="fe fe-user-plus"></i> <span>Complain Preview</span></a>
+                    <a href="/my_complain"><i class="fe fe-user-plus"></i> <span>My Complains</span></a>
                 </li>
 
-
+                <li>
+                    <a href="preview.html"><i class="fe fe-user-plus"></i> <span>All Complains</span></a>
+                </li>
                 <li class="menu-title">
                     <span>Additional</span>
                 </li>

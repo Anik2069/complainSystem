@@ -4,7 +4,7 @@
 <!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
 <head>
 		<meta charset="utf-8">
-		<title>Doccure</title>
+		<title>DIU Complain Panel - Student LogIn</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
 		<!-- Favicons -->
@@ -54,16 +54,22 @@
 										<img src="assets/img/download.png" class="img-fluid" alt="Doccure Login">
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
+                                        @if ($message = Session::get('success'))
+                                            <div class="alert alert-success alert-block">
+                                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                                <strong>{{ $message }}</strong>
+                                            </div>
+                                        @endif
 										<div class="login-header">
 											<h3>Login <span>DIU Complain System</span></h3>
 										</div>
-										<form action="admin/index.html">
+										<form action="/submitlogin" method="post">@csrf
 											<div class="form-group form-focus">
-												<input type="email" class="form-control floating">
+												<input type="email" name="email" class="form-control floating">
 												<label class="focus-label">Email</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="password" class="form-control floating">
+												<input type="password" name="password" class="form-control floating">
 												<label class="focus-label">Password</label>
 											</div>
 										<!--	<div class="text-right">
@@ -82,7 +88,7 @@
 													<a href="#" class="btn btn-facebook btn-block"> Forget Password</a>
 												</div>
 												<div class="col-6">
-													<a href="#" class="btn btn-google btn-block"> Active Account</a>
+													<a href="/activeAccount" class="btn btn-google btn-block"> Active Account</a>
 												</div>
 											</div>
 											<div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>

@@ -8,26 +8,9 @@
         <title>Admin - Dashboard</title>
 
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    @include("student.csslink")
 
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-		<!-- Feathericon CSS -->
-        <link rel="stylesheet" href="assets/css/feathericon.min.css">
-
-		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
-
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
+    <![endif]-->
     </head>
     <body>
 
@@ -78,7 +61,7 @@
 								<span class="notification-title">Notifications</span>
 								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
 							</div>
-						<!--	<div class="noti-content">
+				<div class="noti-content">
 								<ul class="notification-list">
 									<li class="notification-message">
 										<a href="#">
@@ -139,7 +122,7 @@
 							</div>
 						</div>
 					</li>
-					<!-- /Notifications -->
+				/Notifications -->
 
 					<!-- User Menu -->
 					<li class="nav-item dropdown has-arrow">
@@ -170,40 +153,7 @@
 			<!-- /Header -->
 
 			<!-- Sidebar -->
-            <div class="sidebar" id="sidebar">
-                <div class="sidebar-inner slimscroll">
-					<div id="sidebar-menu" class="sidebar-menu">
-						<ul>
-							<li class="menu-title">
-								<span>Main</span>
-							</li>
-							<li class="active">
-								<a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
-							</li>
-
-							<li>
-								<a href="projectadd.html"><i class="fe fe-users"></i> <span>Write a Complain</span></a>
-							</li>
-							<li>
-								<a href="preview.html"><i class="fe fe-user-plus"></i> <span>Complain Preview</span></a>
-							</li>
-
-
-
-							<li class="menu-title">
-								<span>Additional</span>
-							</li>
-            
-              <li>
-                <a href="patient-list.html"><i class="fe fe-user"></i> <span>Change Password</span></a>
-              </li>
-              <li>
-                <a href="patient-list.html"><i class="fe fe-user"></i> <span> Log out</span></a>
-              </li>
-						</ul>
-					</div>
-                </div>
-            </div>
+          @include("student.nav")
 			<!-- /Sidebar -->
 
 			<!-- Page Wrapper -->
@@ -682,21 +632,7 @@
 		<!-- /Main Wrapper -->
 
 		<!-- jQuery -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-
-		<!-- Bootstrap Core JS -->
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-
-		<!-- Slimscroll JS -->
-        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-		<script src="assets/plugins/raphael/raphael.min.js"></script>
-		<script src="assets/plugins/morris/morris.min.js"></script>
-		<script src="assets/js/chart.morris.js"></script>
-
-		<!-- Custom JS -->
-		<script  src="assets/js/script.js"></script>
+@include("student.css2")
 
     </body>
 
