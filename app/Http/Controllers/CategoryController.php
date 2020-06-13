@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\category;
+use App\complain;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -31,6 +32,20 @@ class CategoryController extends Controller
         $cate=category::find($id);
         $cate->delete();
         return redirect('/category')->with("success", "Category Deleted Successfully");
+
+    }
+    public function process($id){
+        $cate=complain::find($id);
+        $cate->status="Processing";
+        $cate->save();
+        return redirect('/view_complains/'.$id)->with("success", "Category Deleted Successfully");
+
+    }
+    public function done($id){
+        $cate=complain::find($id);
+        $cate->status="Done";
+        $cate->save();
+        return redirect('/view_complains/'.$id)->with("success", "Category Deleted Successfully");
 
     }
 }

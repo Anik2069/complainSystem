@@ -45,7 +45,11 @@ class ComplainController extends Controller
         ])->get();
         return view("student.preview", compact("value"));
     }
-
+    public function getadmin(Request $request)
+    {
+        $value = complain::all()->sortByDesc("id");
+        return view("admin.preview", compact("value"));
+    }
     public function get2($id, Request $request)
     {
         $value = complain::find($id);
@@ -75,16 +79,29 @@ class ComplainController extends Controller
     public function get4( )
     {
         $c=0;
-        $value = complain::all()->sortByDesc("id");;
+        $value = complain::all()->sortByDesc("id");
         return view("student.adminlist",compact("value","c"));
     }
+    public function get22($id, Request $request)
+    {
+        $value = complain::find($id);
 
+        $value1 = student::where([
+            ["email", "=",$value['user']]
+        ])->get();
+        $i = 0;
+        foreach ($value1 as $val) {
+            $i = $val['id'];
+        }
+        $value1 = student::find($i);
+        return view("admin.profile", compact("value", "value1"));
+    }
     public function get5($id, Request $request)
     {
         $value = complain::find($id);
 
         $value1 = student::where([
-            ["email", "=", $request->session()->get("user")]
+            ["email", "=",$value['user']]
         ])->get();
         $i = 0;
         foreach ($value1 as $val) {

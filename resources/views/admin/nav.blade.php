@@ -5,15 +5,15 @@
                 <li class="menu-title">
                     <span>Main</span>
                 </li>
-                <li class="active">
-                    <a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                <li class="">
+                    <a href="/dash"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="category.html"><i class="fe fe-layout"></i> <span>Category</span></a>
+                    <a href="/category"><i class="fe fe-layout"></i> <span>Category</span></a>
                 </li>
 
                 <li>
-                    <a href="preview.html"><i class="fe fe-user-plus"></i> <span>Complain Preview</span></a>
+                    <a href="/complains"><i class="fe fe-user-plus"></i> <span>Complain Preview</span></a>
                 </li>
 
 
@@ -22,13 +22,13 @@
                 </li>
 
                 <li>
-                    <a href="adminlist.html"><i class="fe fe-user"></i> <span>Student List</span></a>
+                    <a href="/studentlist"><i class="fe fe-user"></i> <span>Student List</span></a>
                 </li>
                 <li>
-                    <a href="patient-list.html"><i class="fe fe-user"></i> <span>Change Password</span></a>
+                    <a href="/change_password_admin"><i class="fe fe-user"></i> <span>Change Password</span></a>
                 </li>
                 <li>
-                    <a href="patient-list.html"><i class="fe fe-user"></i> <span> Log out</span></a>
+                    <a href="/logoutadmin"><i class="fe fe-user"></i> <span> Log out</span></a>
                 </li>
             </ul>
         </div>
