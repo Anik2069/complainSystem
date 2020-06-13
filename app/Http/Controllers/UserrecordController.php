@@ -20,6 +20,7 @@ class UserrecordController extends Controller
             if ($email1 == $value['email'] && $pass == $value['password']) {
                 $request->session()->put('user', $email1);
                 $request->session()->put('pass', $pass);
+                $request->session()->put('id', $value['id']);
                 /*$request->session()->put('rule', $value['userroles']);*/
                 $_SESSION['ee'] = $email1;
                 $_SESSION['id'] = $value['id'];
@@ -45,5 +46,13 @@ class UserrecordController extends Controller
     public function get()
     {
         return view("student.index");
+    }
+
+
+
+    public function logout(Request $request){
+        $request->session()->flush();
+
+        return redirect("/");
     }
 }

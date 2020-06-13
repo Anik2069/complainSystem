@@ -17,17 +17,17 @@
                 </li>
 
                 <li>
-                    <a href="preview.html"><i class="fe fe-user-plus"></i> <span>All Complains</span></a>
+                    <a href="/all_complain"><i class="fe fe-user-plus"></i> <span>All Complains</span></a>
                 </li>
                 <li class="menu-title">
                     <span>Additional</span>
                 </li>
 
                 <li>
-                    <a href="patient-list.html"><i class="fe fe-user"></i> <span>Change Password</span></a>
+                    <a href="/change_password"><i class="fe fe-user"></i> <span>Change Password</span></a>
                 </li>
                 <li>
-                    <a href="patient-list.html"><i class="fe fe-user"></i> <span> Log out</span></a>
+                    <a href="/logout"><i class="fe fe-user"></i> <span> Log out</span></a>
                 </li>
             </ul>
         </div>

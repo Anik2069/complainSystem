@@ -42,3 +42,6 @@ Route::get('/index','UserrecordController@get');
 Route::get('/activeAccount', function () {
     return view('activepass');
 });
+Route::get('/change_password','StudentController@get');
+Route::post('/submitchange','StudentController@submitchange');
+Route::get('/logout','UserrecordController@logout');

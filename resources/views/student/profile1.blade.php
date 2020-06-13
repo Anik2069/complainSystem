@@ -217,14 +217,7 @@
                                 <br><br>
                                 <p>Status: {{$value['status']}}</p>
                                 <button class="btn btn-primary" onclick="printDiv('printableArea')">Print</button>
-                                @if($value['status']=="Pending")
 
-                                    <a class="btn btn-success" href="/view_edit/{{$value['id']}}">Edit</a>
-                                @else
-                                    <button class="btn btn-success" disabled>Edit</button>
-                                @endif
-                                <a class="btn btn-danger" onclick="return confirm('Are you sure?');" href="/delete_complain/{{$value['id']}}">Delete
-                                </a>
                             </div>
 
                         </div>
