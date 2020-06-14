@@ -93,16 +93,16 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        @foreach($value as $val)
+
+                                        @foreach($value as $val)  <tr>
     <td>{{$c=$c+1}}</td>
                                             <td>{{$val['title']}}</td>
                                             <td>{{$val['description']}}</td> <td>
                                                 <a href="/view/{{$val['id']}}" class="btn btn-primary">View</a>
                                             </td>
-
+                                        </tr>
                                         @endforeach
-                                    </tr>
+
 
                                     </tbody>
                                 </table>

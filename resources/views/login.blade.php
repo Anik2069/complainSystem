@@ -52,6 +52,10 @@
 								<div class="row align-items-center justify-content-center">
 									<div class="col-md-7 col-lg-6 login-left">
 										<img src="assets/img/download.png" class="img-fluid" alt="Doccure Login">
+                                        <div class="row">
+
+
+                                        </div>
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
                                         @if ($message = Session::get('success'))
@@ -85,7 +89,7 @@
 											</div>
 											<div class="row form-row social-login">
 												<div class="col-6">
-													<a href="#" class="btn btn-facebook btn-block"> Forget Password</a>
+													<a href="/forget_stu" class="btn btn-facebook btn-block"> Forget Password</a>
 												</div>
 												<div class="col-6">
 													<a href="/activeAccount" class="btn btn-google btn-block"> Active Account</a>
@@ -95,12 +99,37 @@
 										</form>
 									</div>
 								</div>
+
 							</div>
+
 							<!-- /Login Tab Content -->
 
 						</div>
 					</div>
+                    <div class="row ">
+                        <div class=" col-md-1">
+                        </div>
+                        <div class=" col-md-5">
+                            <h4 style="text-align: center"><u>About This System</u></h4>
+                            <ul>
+                                <li>hhh</li>
+                                <li>hhh</li>
+                                <li>hhh</li> <li>hhh</li>
 
+
+                            </ul>
+                        </div>
+                        <div class=" col-md-5">
+                            <h4 style="text-align: center"><u>How to Login</u></h4>
+                            <ul>
+                                <li>hhh</li>
+                                <li>hhh</li>
+                                <li>hhh</li> <li>hhh</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
 				</div>
 
 			</div>

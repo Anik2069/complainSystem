@@ -33,7 +33,50 @@ class StudentController extends Controller
             return redirect('/activeAccount')->with("success", "You can not Provide Your Versity Email..Enter Your Varsity Provided Email!!!!!");
         }
     }
+    public function activate1(Request $request)
+    {
+        $email = $request->input('email');
+        $email1 = explode('@', $email);
+        if ($email1[1] == "diu.edu.bd") {
+            $strlen = 5;
+            $str = "1234567890987654321";
+            $rand = substr(str_shuffle($str), 0, $strlen);
+            //     $message = "Hi " . $request->input('name') . ' ,';
+            $message = "\nYour Login Password is: " . $rand;
 
+            Mail::to($request->input('email'))->send(new SendMail('Email Verification', $message));
+            $std = new userrecord();
+            $std->email = $email;
+            $std->password = $rand;
+            $std->save();
+            return redirect('/admin')->with("success", "Login to Panel!!!!! Password is given to your varsity email.");
+
+        } else {
+            return redirect('/forget')->with("success", "You can not Provide Your Versity Email..Enter Your Varsity Provided Email!!!!!");
+        }
+    }
+    public function activate2(Request $request)
+    {
+        $email = $request->input('email');
+        $email1 = explode('@', $email);
+        if ($email1[1] == "diu.edu.bd") {
+            $strlen = 5;
+            $str = "1234567890987654321";
+            $rand = substr(str_shuffle($str), 0, $strlen);
+            //     $message = "Hi " . $request->input('name') . ' ,';
+            $message = "\nYour Login Password is: " . $rand;
+
+            Mail::to($request->input('email'))->send(new SendMail('Email Verification', $message));
+            $std = new userrecord();
+            $std->email = $email;
+            $std->password = $rand;
+            $std->save();
+            return redirect('/')->with("success", "Login to Panel!!!!!");
+
+        } else {
+            return redirect('/forget_stu')->with("success", "You can not Provide Your Versity Email..Enter Your Varsity Provided Email!!!!!");
+        }
+    }
     public function get(Request $request)
     {
         $pass = $request->session()->get('user');

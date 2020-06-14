@@ -2,24 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f1f201a-9e38-4674-baea-7cde2b3313a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/forgot1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComplainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComplainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/adminlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminlist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserrecordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserrecordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_11_184028_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_11_184028_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_12_155109_create_userrecords_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_12_155109_create_userrecords_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/preview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/preview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forgot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/student/adminlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/adminlist.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/student/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/preview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/preview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/profile1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/profile1.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/projectadd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/projectadd.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,12 +125,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/student" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Laravel\DIU_Complain_System\resources\views\student" />
       <recent name="C:\xampp\htdocs\Laravel\DIU_Complain_System\resources\views" />
+      <recent name="C:\xampp\htdocs\Laravel\DIU_Complain_System\resources\views\student" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,7 +165,8 @@
       <workItem from="1591895988386" duration="5397000" />
       <workItem from="1591969902127" duration="15051000" />
       <workItem from="1592028748346" duration="7035000" />
-      <workItem from="1592060848899" duration="5596000" />
+      <workItem from="1592060848899" duration="9024000" />
+      <workItem from="1592150829266" duration="4310000" />
     </task>
     <servers />
   </component>
@@ -196,6 +193,11 @@
           <url>file://$PROJECT_DIR$/resources/views/student/admin.blade.php</url>
           <line>50</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/login.blade.php</url>
+          <line>52</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

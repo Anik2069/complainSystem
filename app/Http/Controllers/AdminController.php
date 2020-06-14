@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\admin;
+use App\category;
+use App\complain;
 use App\student;
 use App\userrecord;
 use Illuminate\Http\Request;
@@ -54,18 +56,34 @@ class AdminController extends Controller
     public function get5($id)
     {
         $stu = student::find($id);
+
         if($stu["approved"]==1){
+
             $stu->approved=0;
         }else{
+
             $stu->approved=1;
         }
+
+        $stu->save();
         return redirect("/studentlist");
     }
 
 
     public function get()
     {
-        return view("admin.index");
+        $value =count(category::all());
+        $value1 =count(complain::where([
+            ['status','=',"Pending"]
+        ])->get());
+        $value2 =count(complain::where([
+            ['status','=',"Processing"]
+        ])->get());
+        $value3 =count(complain::where([
+            ['status','=',"Done"]
+        ])->get());
+        $value4 =count(complain::all());
+        return view("admin.index",compact('value','value1','value2','value3','value4'));
     }
 
     public function logout(Request $request)

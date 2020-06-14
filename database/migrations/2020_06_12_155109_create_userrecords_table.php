@@ -17,6 +17,7 @@ class CreateUserrecordsTable extends Migration
             $table->bigIncrements('id');
             $table->string("email");
             $table->string("password");
+
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@ class CreateStudentsTable extends Migration
             $table->string("email");
             $table->string("address");
             $table->string("phone");
-
+            $table->string("approved");
             $table->timestamps();
         });
     }

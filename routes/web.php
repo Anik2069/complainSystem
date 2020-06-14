@@ -18,7 +18,13 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('login1');
 });
+Route::get('/forget', function () {
+    return view('forgot');
+});
 Route::post('/submitadmin','AdminController@submitlogin');
+Route::post('/forget_account1','StudentController@activate2');
+
+Route::post('/forget_account','StudentController@activate1');
 
 Route::get('/dash','AdminController@get');
 Route::get('/category','CategoryController@get');
@@ -62,3 +68,7 @@ Route::get('/activeAccount', function () {
 Route::get('/change_password','StudentController@get');
 Route::post('/submitchange','StudentController@submitchange');
 Route::get('/logout','UserrecordController@logout');
+
+Route::get('/forget_stu', function () {
+    return view('forgot1');
+});

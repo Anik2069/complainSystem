@@ -102,7 +102,7 @@
                                         <th>Serial</th>
                                         <th>ID</th>
                                         <th>Category</th>
-                                        <th>Total Complain</th>
+
                                         <th class="text-right">Actions</th>
                                     </tr>
                                     </thead>
@@ -120,7 +120,7 @@
                                                 <a href="profile.html">{{$val['name']}}</a>
                                             </h2>
                                         </td>
-                                        <td>{{$val['count']}}</td>
+
                                         <td class="text-right">
                                             <div class="actions">
                                                 <a class="btn btn-sm bg-success-light" data-toggle="modal"
