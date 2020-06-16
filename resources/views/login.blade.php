@@ -95,7 +95,7 @@
 													<a href="/activeAccount" class="btn btn-google btn-block"> Active Account</a>
 												</div>
 											</div>
-											<div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>
+
 										</form>
 									</div>
 								</div>
@@ -112,9 +112,9 @@
                         <div class=" col-md-5">
                             <h4 style="text-align: center"><u>About This System</u></h4>
                             <ul>
-                                <li>hhh</li>
-                                <li>hhh</li>
-                                <li>hhh</li> <li>hhh</li>
+                                <li>Do you have any complains? <br>
+                                    Share your complains with us and help us improve your experience with <strong>Daffodil International University</strong>.</li>
+
 
 
                             </ul>
@@ -122,9 +122,10 @@
                         <div class=" col-md-5">
                             <h4 style="text-align: center"><u>How to Login</u></h4>
                             <ul>
-                                <li>hhh</li>
-                                <li>hhh</li>
-                                <li>hhh</li> <li>hhh</li>
+                                <li>At first Click On <strong>Active Account</strong> Button</li>
+                                <li>Then,Provide Your Varsity Mail on that field.</li>
+                                <li>A Password will send to your mail</li> <li>With that password Login to the panel</li>
+                                <li>For More Query, Contact to Admin</li>
 
 
                             </ul>
