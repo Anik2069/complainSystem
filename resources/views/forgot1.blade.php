@@ -62,7 +62,7 @@
 										<!-- Forgot Password Form -->
 										<form action="forget_account1" method="post"> @csrf
 											<div class="form-group form-focus">
-												<input type="email" class="form-control floating">
+												<input type="email" name="email" class="form-control floating">
 												<label class="focus-label">Email</label>
 											</div>
 											<div class="text-right">
